@@ -1,0 +1,27 @@
+{
+  "name": "ask_consulting",
+  "title": "Ask Consulting",
+  "description": "Slideshow with arrow and bubble field activation",
+  "version": "0.1.0",
+  "homepage": "https://github.com/josankapo/bunch_web/tree/master/ask_consulting",
+  "author": {
+    "name": "Jonathan Gabel",
+    "email": "hello@jonathangabel.com",
+    "url": "jonathangabel.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josankapo/bunch_web/tree/master/ask_consulting"
+  },
+  "bugs": "https://github.com/josankapo/bunch_web/tree/master/ask_consulting/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/josankapo/bunch_web/tree/master/ask_consulting/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
