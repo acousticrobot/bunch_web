@@ -1,0 +1,30 @@
+* {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+}
+
+li {
+	list-style-type: none;
+}
+
+p {
+	margin: 10px;
+}
+/*-------------- BEGIN: MENU COLUMN / CONTENT COLUMN DIV SWAP - STYLES---------------------------*/
+
+.thumb {
+	border: 2px solid white; /* same as bkg color, to prevent div width change*/
+	float: left;
+	padding: 4px;
+	margin: 4px;
+}
+
+.thumb.active {
+	border: 2px solid #FF0000;
+}
+

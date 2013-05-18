@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>jQuery Div Swap</title>
+	
+<link href="divswapstyle.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="divswap.js"></script>
+
+</head>
+<body>
+	<h1>The Menu and Contents Columns</h1>
+	<p><em>slide viewer is located in menu item C</em></p>
+	
+<!-- MENU COLUMN, unordered list with id = "navCol" -->
+	
+	<ul id = "navCol">
+		<li>menu item A</li>
+		<li>menu item B</li>
+		<li>menu item C</li>
+		<li>menu item D</li>
+	</ul>
+	
+	<!-- CONTENT COLUMN, unordered list with id = "contentCol" -->
+	<!-- each list item had a class of "contentItem" -->
+	<!-- each list item corresponds in place to its menu item in the MENU COLUMN -->
+
+	<ul id="contentCol">		
+		<li class="contentItem"><div>
+			<h2>Content A</h2>
+			<p>Aorem Aipsum Adolor Asit Aamet, Aconsectetur Aadipisicing Aelit, Ased Ado Aeiusmod Atempor Aincididunt Aut Alabore Aet Adolore Amagna Aaliqua. AUt Aenim Aad Aminim Aveniam, Aquis Anostrud Aexercitation Aullamco Alaboris Anisi Aut Aaliquip Aex Aea Acommodo Aconsequat. ADuis Aaute Airure Adolor Ain Areprehenderit Ain Avoluptate Avelit Aesse Acillum Adolore Aeu Afugiat Anulla Apariatur. AExcepteur Asint Ao Caecat Acupidatat Anon Aproident, Asunt Ain Aculpa Aqui Aofficia Adeserunt Amollit Aanim Aid Aest Alaborum.</p>
+			<p>Aorem Aipsum Adolor Asit Aamet, Aconsectetur Aadipisicing Aelit, Ased Ado Aeiusmod Atempor Aincididunt Aut Alabore Aet Adolore Amagna Aaliqua. AUt Aenim Aad Aminim Aveniam, Aquis Anostrud Aexercitation Aullamco Alaboris Anisi Aut Aaliquip Aex Aea Acommodo Aconsequat. ADuis Aaute Airure Adolor Ain Areprehenderit Ain Avoluptate Avelit Aesse Acillum Adolore Aeu Afugiat Anulla Apariatur. AExcepteur Asint Ao Caecat Acupidatat Anon Aproident, Asunt Ain Aculpa Aqui Aofficia Adeserunt Amollit Aanim Aid Aest Alaborum.</p>
+			
+		</div></li>
+		
+		<li class="contentItem"><div>
+			<h2>Content B</h2>
+			<p>Borem Bipsum Bdolor Bsit Bamet, Bconsectetur Badipisicing Belit, Bsed Bdo Beiusmod Btempor Bincididunt But Blabore Bet Bdolore Bmagna Baliqua. BUt Benim Bad Bminim Bveniam, Bquis Bnostrud Bexercitation Bullamco Blaboris Bnisi But Baliquip Bex Bea Bcommodo Bconsequat. BDuis Baute Birure Bdolor Bin Breprehenderit Bin Bvoluptate Bvelit Besse Bcillum Bdolore Beu Bfugiat Bnulla Bpariatur. BExcepteur Bsint Bo Caecat Bcupidatat Bnon Bproident, Bsunt Bin Bculpa Bqui Bofficia Bdeserunt Bmollit Banim Bid Best Blaborum.</p>
+			<p>Borem Bipsum Bdolor Bsit Bamet, Bconsectetur Badipisicing Belit, Bsed Bdo Beiusmod Btempor Bincididunt But Blabore Bet Bdolore Bmagna Baliqua. BUt Benim Bad Bminim Bveniam, Bquis Bnostrud Bexercitation Bullamco Blaboris Bnisi But Baliquip Bex Bea Bcommodo Bconsequat. BDuis Baute Birure Bdolor Bin Breprehenderit Bin Bvoluptate Bvelit Besse Bcillum Bdolore Beu Bfugiat Bnulla Bpariatur. BExcepteur Bsint Bo Caecat Bcupidatat Bnon Bproident, Bsunt Bin Bculpa Bqui Bofficia Bdeserunt Bmollit Banim Bid Best Blaborum.</p>		
+		</div></li>
+			
+		
+		<li class="contentItem"><div>
+			<h2>Content C</h2>
+			<div id = 'cabinet'>
+				<div id = 'carousel'>
+					<ul>
+						<li><div><img src="images/imageA.jpg"><p>Image A, Ink on Paper, 2012</p></div></li>
+						<li><div><img src="images/imageB.jpg"><p>Image B, Ink on Paper, 2012</p></div></li>
+						<li><div><img src="images/imageC.jpg"><p>Image C, Ink on Paper, 2012</p></div></li>
+						<li><div><img src="images/imageD.jpg"><p>Image D, Ink on Paper, 2012</p></div></li>
+						<li><div><img src="images/imageE.jpg"><p>Image E, Ink on Paper, 2012</p></div></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div id='navArrows'>
+				<span id = 'leftArrow'>&larr;</span>
+				<span id = 'rightArrow'>&rarr;</span>
+			</div>
+			
+		</div></li>
+		
+
+		<li class="contentItem"><div>
+			<h2>Content D</h2>
+			<p>Dorem Dipsum  Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+			<p>Dorem Dipsum  Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>		
+		</div></li>
+
+	</ul>
+
+</body>
+</html>

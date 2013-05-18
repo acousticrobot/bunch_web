@@ -1,0 +1,103 @@
+* {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 50px;
+}
+
+li {
+	list-style-type: none;
+}
+
+p {
+	margin: 10px;
+}
+/*-------------- BEGIN: MENU COLUMN / CONTENT COLUMN DIV SWAP - STYLES---------------------------*/
+
+#navCol {
+	float: left;
+	margin: 10px;
+}
+
+#navCol li {
+	display: block;
+	padding: 5px;
+	border: 1px solid #999;
+	letter-spacing: .07em;
+}
+
+#navCol li.active {
+	font-weight: bold;
+	background-color: red;
+	letter-spacing: 0;
+}
+
+#contentCol {
+	margin-left: 200px;
+}
+
+#contentCol li.active {
+	width: 600px; 
+	height: 500px;	
+}
+
+
+/*-------------- BEGIN: CONTENT SLIDER STYLES--------------------------------------------------*/
+
+
+/*
+	all image/text divs are hidded inside the cabinet
+	the cabinet sets the size of the viewing window
+*/
+#cabinet {
+	width: 550px; 	/* FIXED WIDTH OF THE IMAGE/TEXT BOX */
+	height: 400px;	/* FIXED HEIGHT OF THE IMAGE/TEXT BOX */
+	overflow: hidden;
+	border: 1px solid #F00; /* the red border */
+}
+
+/*	the slide carousel holds all of the slide divs
+	the animation happens behind the cabinet's left side (to 
+	avoid viewing the text boxes resizing and the text moving).
+	As the hidden slide shrinks, the visible slide moves left
+	and disappears.
+*/
+#carousel {
+	margin-left: -550px; /* SUBTRACT FIXED WIDTH OF THE IMAGE/TEXT BOX */
+	width: 2000px; /* this is large, to avoid slides "floating up" */
+}
+
+#carousel li {
+	float: left;
+	width: 550px;	/* FIXED WIDTH OF THE IMAGE/TEXT BOX */
+	height: 400px;	/* FIXED HEIGHT OF THE IMAGE/TEXT BOX */
+	background-color: #FFA; /* the yellow box*/
+}
+
+#carousel li div {
+	padding: 25px;
+}
+
+#carousel li div p {
+	margin: 10px;
+}
+
+#navArrows {
+	font: 1.5em "Lucida Grande", "Trebuchet MS", Verdana, sans-serif;
+	border: 1px solid #999;
+	width: 80px;
+	padding: 0 10px 5px  15px;
+	margin: 10px 0 0 400px;
+}
+
+#navArrows span {
+	margin: 5px;
+}
+
+#leftArrow.arrowOff, #rightArrow.arrowOff {
+	color: #DDD;
+}
+

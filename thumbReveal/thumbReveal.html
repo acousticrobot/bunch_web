@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>jQuery Feature Reveal with Thumbs</title>
+	
+<link href="thumbReveal.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="thumbReveal.js"></script>
+
+</head>
+<body>
+	
+	<h1>Feature and Thumb Animation</h1>
+		
+<!-- MENU COLUMN, unordered list with id = "navCol" -->
+	
+	<ul id = "feature">
+			<li class="featureItem">
+				<div>
+					<a href="http://google.com/A">
+						<img src="images/imageA.jpg" alt="A" />
+					</a>
+				</div>
+			</li>
+			<li class="featureItem">
+				<div>
+					<a href="http://google.com/B">
+						<img src="images/imageB.jpg" alt="B" />
+					</a>
+				</div>
+			</li>
+			<li class="featureItem">
+				<div>
+					<a href="http://google.com/C">
+						<img src="images/imageC.jpg" alt="C" />
+					</a>
+				</div>
+			</li>
+	</ul>
+	
+
+
+	<!-- CONTENT COLUMN, unordered list with id = "thumb" -->
+	<!-- each list item had a class of "thumb" -->
+	<!-- each list item corresponds in place to its menu item in the MENU COLUMN -->
+
+	<ul id="thumbs">		
+		<li class="thumb">
+			<div> 
+				<img src="images/thumbA.jpg" alt="A" />
+			</div>
+		</li>
+
+		<li class="thumb">
+			<div>
+				<img src="images/thumbB.jpg" alt="B" />
+			</div>
+		</li>
+	
+		<li class="thumb">
+			<div>
+				<img src="images/thumbC.jpg" alt="C" />
+			</div>
+		</li>
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+#animation {
+	width: 700px; height: 358px;
+	background-repeat: no-repeat;
+	position: relative;
+	background-image: url(images/background.png);
+	background-repeat: repeat;
+	background-position: center center;
+	overflow: hidden;
+}
+	
+#banner {
+	background-image: url(images/banner.jpg);
+	width: 700px; height: 358px;
+	position: absolute;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+
+#runningBanner {
+	background-image: url(images/banner-running.png);
+	background-position: 750px 200px;
+	width: 700px; height: 358px;
+	background-repeat: no-repeat;
+	position: absolute;
+	opacity: .75;
+	-moz-opacity: .75;
+	filter:alpha(opacity=75);
+}		
+
+#freedom,
+#art,
+#science,
+#medicine,
+#freedomGlow,
+#artGlow,
+#scienceGlow,
+#medicineGlow,
+#bannerGlow { 
+	width: 700px; height: 358px;
+	background-repeat: no-repeat;
+	position: absolute;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:alpha(opacity=0);
+}
+	
+#freedom { background-image: url(images/freedom.png);}	
+#art { background-image: url(images/art.png);}	
+#science { background-image: url(images/science.png);	}	
+#medicine {	background-image: url(images/medicine.png);}
+	
+#freedomGlow{ 	background-image: url(images/banner-freedom.png);}
+#artGlow{ background-image: url(images/banner-art.png);}
+#medicineGlow{ background-image: url(images/banner-medicine.png);}
+#scienceGlow{ background-image: url(images/banner-science.png);}
+
+#bannerGlow{ background-image: url(images/banner-glow.png);}

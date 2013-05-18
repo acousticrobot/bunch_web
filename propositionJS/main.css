@@ -1,0 +1,153 @@
+/* -----------------------		RESET 			--------------------------------- */
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, pre, code, address, form, fieldset, blockquote {
+ padding: 0;
+ margin: 0;
+ font-size: 100%;
+ font-weight: normal;
+ letter-spacing:normal;
+}
+table { border-collapse: collapse; border-spacing: 0; }
+td, th, caption { font-weight: normal; text-align: left; }
+img, fieldset { border: 0; }
+q:before, q:after { content:''; }
+ol, ul, li { list-style-type: none; }
+article, aside, figure, footer, header, nav, section  { display: block;}
+
+/* -----------------------		BASIC SIZING 			--------------------------------- */
+
+.clear { clear: both;}
+.clearLeft {clear: left;}
+
+body {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;	
+	font-size: 100%;
+	padding: 0 140px;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 1.75em 0;
+	padding-left: 10px;
+}
+h2 {
+	font-size: 1.75em;
+	margin: 1.5em 0;
+	padding-left: 10px;	
+}
+h3 {
+	font-size: 1.5em;
+	margin: 1.25em 0;
+	padding-left: 10px;		
+}
+h4 {
+	font-size: 1.25em;
+	margin: 1.125em 0;
+	padding-left: 10px;			
+}
+h5 {
+	font-size: 1.125em;
+	margin: 1em 0;
+	padding-left: 10px;				
+}
+
+p {
+	font-size: 1em;
+	padding: 10px;
+	margin: 1em 0;
+}
+
+/*-------------- BEGIN: MENU COLUMN / CONTENT COLUMN DIV SWAP - STYLES---------------------------*/
+
+#navCol {
+	float: left;
+	margin: 10px;
+}
+
+#navCol li {
+	display: block;
+	padding: 5px;
+	border: 1px solid #999;
+	letter-spacing: .07em;
+}
+
+#navCol li.active {
+	font-weight: bold;
+	background-color: red;
+	letter-spacing: 0;
+}
+
+#contentCol {
+	margin-left: 200px;
+}
+
+#contentCol li.active {
+	width: 600px; 
+	height: 500px;	
+}
+
+
+/*-------------- BEGIN: CONTENT SLIDER STYLES--------------------------------------------------*/
+
+
+/*
+	all image/text divs are hidden inside the carousel
+	the carousel sets the size of the viewing window
+*/
+.carousel {
+	width: 550px; 	/* FIXED WIDTH OF THE IMAGE/TEXT BOX */
+	height: 400px;	/* FIXED HEIGHT OF THE IMAGE/TEXT BOX */
+	overflow: none; /* JAVASCRIPT: reset to hidden */ 
+	border: 1px solid #F00; /* the red border for demonstration purposes */
+}
+
+/*	the slide carousel ul holds all of the slide divs
+	the animation happens behind the ul's left side (to 
+	avoid viewing the text boxes resizing and the text moving).
+	As the hidden slide shrinks, the visible slide moves left
+	and disappears.
+*/
+.carousel ul {
+/*  JAVASCRIPT sets these values on window load: */
+/*	margin-left: -550px; /* SUBTRACT FIXED WIDTH OF THE IMAGE/TEXT BOX */
+/*	width: 2000px; /* this is large, to avoid slides "floating up" */
+}
+
+.carousel ul li {
+	float: left;
+	width: 550px;	/* FIXED WIDTH OF THE IMAGE/TEXT BOX */
+	height: 400px;	/* FIXED HEIGHT OF THE IMAGE/TEXT BOX */
+	background-color: #FFA; /* the yellow box*/
+}
+
+.carousel ul li div {
+	padding: 25px;
+}
+
+.carousel ul li div p {
+	margin: 10px;
+}
+
+.leftArrow, .rightArrow {
+	font: 1.5em "Helvetica Neue", "Trebuchet MS", Verdana, sans-serif;
+	margin: 10px;
+}
+
+.leftArrow.arrowOff, .rightArrow.arrowOff {
+	color: #DDD;
+}
+
+/*-------------- BEGIN: PEEL REVEAL STYLES--------------------------------------------------*/
+
+/* 	No custom styles needed for peelReveal()
+
+#peelReveal {}
+
+#peelReveal li {}
+
+
+
+
+
+
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	
+	<title>jQuery Div Swap with LightBox</title>
+	
+<link href="main.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/divswap.js"></script>
+
+	<!-- LIGHTBOX ADDITIONAL FILES -->
+<script type="text/javascript" src="lightbox/js/jquery.lightbox-0.5.min.js"></script>
+<link rel="stylesheet" type="text/css" href="lightbox/css/jquery.lightbox-0.5.css" media="screen" />	
+	<!-- end LIGHTBOX ADDITIONAL FILES -->
+	
+</head>
+<body>
+	<h1>The Menu and Contents Columns with LightBox</h1>
+	<p><em>slide viewer is located in menu item C and E and images are linked to large versions via lightbox in separate galleries. Menu item D is text in a slideshow, links behave normally</em></p>
+	
+	<!-- MENU COLUMN, unordered list with id = "navCol" -->
+
+	<ul id = "navCol">
+		<li>menu item A</li>
+		<li>menu item B</li>
+		<li>slideshow C</li>
+		<li>sliding text D</li>
+		<li>slideshow E</li>
+	</ul>
+
+	<!-- CONTENT COLUMN, unordered list with id = "contentCol" -->
+	<!-- each list item had a class of "contentItem" -->
+	<!-- each list item corresponds in place to its menu item in the MENU COLUMN -->
+
+	<ul id="contentCol">		
+		<li class="contentItem"> 
+			<h2>Content A</h2>
+			<p>Aorem Aipsum Adolor Asit Aamet, Aconsectetur Aadipisicing Aelit, Ased Ado Aeiusmod Atempor Aincididunt Aut Alabore Aet Adolore Amagna Aaliqua. AUt Aenim Aad Aminim Aveniam, Aquis Anostrud Aexercitation Aullamco Alaboris Anisi Aut Aaliquip Aex Aea Acommodo Aconsequat. ADuis Aaute Airure Adolor Ain Areprehenderit Ain Avoluptate Avelit Aesse Acillum Adolore Aeu Afugiat Anulla Apariatur. AExcepteur Asint Ao Caecat Acupidatat Anon Aproident, Asunt Ain Aculpa Aqui Aofficia Adeserunt Amollit Aanim Aid Aest Alaborum.</p>
+				<p>Aorem Aipsum Adolor Asit Aamet, Aconsectetur Aadipisicing Aelit, Ased Ado Aeiusmod Atempor Aincididunt Aut Alabore Aet Adolore Amagna Aaliqua. AUt Aenim Aad Aminim Aveniam, Aquis Anostrud Aexercitation Aullamco Alaboris Anisi Aut Aaliquip Aex Aea Acommodo Aconsequat. ADuis Aaute Airure Adolor Ain Areprehenderit Ain Avoluptate Avelit Aesse Acillum Adolore Aeu Afugiat Anulla Apariatur. AExcepteur Asint Ao Caecat Acupidatat Anon Aproident, Asunt Ain Aculpa Aqui Aofficia Adeserunt Amollit Aanim Aid Aest Alaborum.</p>
+		</li> <!-- END: contentItem -->
+
+		<li class="contentItem">
+			<h2>Content B</h2>
+			<p>Borem Bipsum Bdolor Bsit Bamet, Bconsectetur Badipisicing Belit, Bsed Bdo Beiusmod Btempor Bincididunt But Blabore Bet Bdolore Bmagna Baliqua. BUt Benim Bad Bminim Bveniam, Bquis Bnostrud Bexercitation Bullamco Blaboris Bnisi But Baliquip Bex Bea Bcommodo Bconsequat. BDuis Baute Birure Bdolor Bin Breprehenderit Bin Bvoluptate Bvelit Besse Bcillum Bdolore Beu Bfugiat Bnulla Bpariatur. BExcepteur Bsint Bo Caecat Bcupidatat Bnon Bproident, Bsunt Bin Bculpa Bqui Bofficia Bdeserunt Bmollit Banim Bid Best Blaborum.</p>
+				<p>Borem Bipsum Bdolor Bsit Bamet, Bconsectetur Badipisicing Belit, Bsed Bdo Beiusmod Btempor Bincididunt But Blabore Bet Bdolore Bmagna Baliqua. BUt Benim Bad Bminim Bveniam, Bquis Bnostrud Bexercitation Bullamco Blaboris Bnisi But Baliquip Bex Bea Bcommodo Bconsequat. BDuis Baute Birure Bdolor Bin Breprehenderit Bin Bvoluptate Bvelit Besse Bcillum Bdolore Beu Bfugiat Bnulla Bpariatur. BExcepteur Bsint Bo Caecat Bcupidatat Bnon Bproident, Bsunt Bin Bculpa Bqui Bofficia Bdeserunt Bmollit Banim Bid Best Blaborum.</p>		
+		</li> <!-- END: contentItem -->
+
+
+		<li class="contentItem">
+			<div class = "slideshow LBGalleryA">
+				<div class = 'carousel'>
+						<ul>
+							<li>
+								<div>
+									<a href="images/imageA-lrg.jpg" title="Image A, Ink on Paper, 2012"><img src="images/imageA.jpg" /></a>
+									<p>Image A, Ink on Paper, 2012</p>
+								</div>
+								</li>
+							<li>
+								<div>
+									<a href="images/imageB-lrg.jpg" title="Image B, Ink on Paper, 2012"><img src="images/imageB.jpg" /></a>
+									<p>Image B, Ink on Paper, 2012</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageC-lrg.jpg" title="Image C, Ink on Paper, 2012"><img src="images/imageC.jpg" /></a>
+									<p>Image C, Ink on Paper, 2012</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageD-lrg.jpg" title="Image D, Ink on Paper, 2012"><img src="images/imageD.jpg" /></a>
+									<p>Image D, Ink on Paper, 2012</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageE-lrg.jpg" title="Image E, Ink on Paper, 2012"><img src="images/imageE.jpg" /></a>
+									<p>Image E, Ink on Paper, 2012</p>
+								</div>
+							</li>
+						</ul>
+				</div> <!-- carousel -->
+
+			</div> <!-- END: slideshow -->			
+		</li> <!-- END: contentItem -->
+
+		<li class="contentItem">
+			<div class = "slideshow">
+				<div class = 'carousel'>
+						<ul>
+							<li>
+								<div>
+									<h3>No Lighbox, text based slideshow</h3>
+									<p>Dorem Dipsum  <a href='http://google.com' title="test">Google Test link </a>Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h3>No Lighbox, text based slideshow</h3>
+									<p>Dorem Dipsum  <a href='http://google.com' title="test">Google Test link </a>Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h3>No Lighbox, text based slideshow</h3>
+									<p>Dorem Dipsum  <a href='http://google.com' title="test">Google Test link </a>Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h3>No Lighbox, text based slideshow</h3>
+									<p>Dorem Dipsum  <a href='http://google.com' title="test">Google Test link </a>Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<h3>No Lighbox, text based slideshow</h3>
+									<p>Dorem Dipsum  <a href='http://google.com' title="test">Google Test link </a>Dolor Dsit Damet, Dconsectetur Dadipisicing Delit, Dsed  Do Deiusmod Dtempor Dincididunt Dut Dlabore Det  Dolore Dmagna Daliqua. DUt Denim Dad Dminim Dveniam, Dquis Dnostrud Dexercitation Dullamco Dlaboris Dnisi Dut Daliquip Dex Dea Dcommodo Dconsequat. Duis Daute Dirure  Dolor Din Dreprehenderit Din Dvoluptate Dvelit Desse Dcillum  Dolore Deu Dfugiat Dnulla Dpariatur. DExcepteur Dsint Do Daecat Dcupidatat Dnon Dproident, Dsunt Din Dculpa Dqui Dofficia  Deserunt Dmollit Danim Did Dest Dlaborum.</p>
+								</div>
+							</li>
+						</ul>
+				</div> <!-- carousel -->
+
+			</div> <!-- END: slideshow -->			
+		</li> <!-- END: contentItem D-->
+
+		<li class="contentItem">
+			<div class = "slideshow LBGalleryB">
+				<div class = 'carousel'>
+						<ul>
+							<li>
+								<div>
+									<a href="images/imageA-lrg.jpg" title="Image A slideshow E"><img src="images/imageA.jpg" /></a>
+									<p>Image A slideshow E</p>
+								</div>
+								</li>
+							<li>
+								<div>
+									<a href="images/imageB-lrg.jpg" title="Image B slideshow E"><img src="images/imageB.jpg" /></a>
+									<p>Image B slideshow E</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageC-lrg.jpg" title="Image C slideshow E"><img src="images/imageC.jpg" /></a>
+									<p>Image C slideshow E</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageD-lrg.jpg" title="Image D slideshow E"><img src="images/imageD.jpg" /></a>
+									<p>Image D slideshow E</p>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a href="images/imageE-lrg.jpg" title="Image E slideshow E"><img src="images/imageE.jpg" /></a>
+									<p>Image E slideshow E</p>
+								</div>
+							</li>
+						</ul>
+				</div> <!-- carousel -->
+
+			</div> <!-- END: slideshow -->			
+		</li> <!-- END: contentItem -->
+
+
+		
+	</ul> <!-- END: contentCol -->
+
+</body>
+</html>
