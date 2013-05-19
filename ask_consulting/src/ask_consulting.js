@@ -1,5 +1,4 @@
 /**
-* ask_consulting
 * https://github.com/josankapo/bunch_web/tree/master/ask_consulting
 * @author Jonathan Gabel for Bunch Web Development
 * @email: Bunch Web Development <info@bunchwebdevelopment.com>

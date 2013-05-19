@@ -1,30 +1,26 @@
 # Ask Consulting
 
-Slideshow with arrow and bubble field activation
+*Slide-show with arrow and bubble field on-click animation*
 
-## Getting Started
-Download the [production version][min] or the [development version][max].
+## Javascript Files
 
-[min]: https://raw.github.com/master/ask_consulting/master/dist/ask_consulting.min.js
-[max]: https://raw.github.com/master/ask_consulting/master/dist/ask_consulting.js
+Look in dist/ for final uncompressed and minified builds of javascript files:
 
-In your web page:
+    dist/ask_consulting.js
 
-```html
-<script src="jquery.js"></script>
-<script src="dist/ask_consulting.min.js"></script>
-<script>
-jQuery(function($) {
-  $.awesome(); // "awesome"
-});
-</script>
-```
+    dist/ask_consulting_min.js
 
-## Documentation
-_(Coming soon)_
+## Changes to the HTML:
 
-## Examples
-_(Coming soon)_
+ *Please make the following changes to the HTML:*
 
-## Release History
-_(Nothing yet)_
+   * All speech bubble anchor links should have the class "content-link"
+   * Remove the inline javascript, it is now handled through jQuery onClick events
+
+    <a id="insights-link" class="content-link active" href="#">...</a>
+    <a id="strategies-link" href="#" class="content-link">...</a>
+    ...
+
+## Other necessities:
+
+Rock on!
