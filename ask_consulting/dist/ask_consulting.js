@@ -1,15 +1,14 @@
-/*! Ask Consulting - v0.1.0 - 2013-05-18
-* https://github.com/josankapo/bunch_web/tree/master/ask_consulting
-* Copyright (c) 2013 Jonathan Gabel; Licensed MIT */
-/**
-* ask_consulting
-* https://github.com/josankapo/bunch_web/tree/master/ask_consulting
-* @author Jonathan Gabel for Bunch Web Development
-* @email: Bunch Web Development <info@bunchwebdevelopment.com>
-* Copyright (c) 2013 Jonathan Gabel
-* Licensed under the MIT license.
-* @namespace askConsulting
-*/
+/*! Ask Consulting - v0.1.0 - 2013-05-19
+ * author Jonathan Gabel
+ * email hello@jonathangabel.com}
+ * jonathangabel.com
+ * https://github.com/josankapo/bunch_web/tree/master/ask_consulting
+ * Copyright (C) 2013
+ * License MIT
+ *
+ */
+
+
 var askConsulting = askConsulting === undefined ? {} : askConsulting ;
 if (typeof askConsulting !== 'object') {
   throw new Error('askConsulting is not an object!');
@@ -17,9 +16,45 @@ if (typeof askConsulting !== 'object') {
 
 
 // These names should match the content blocks
-//
+
 askConsulting.contents = ["insights","strategies","iq","skill"];
 
+askConsulting.inSequenceGoto = function(direction) {
+    // find next content div to activate
+    var currentActive = $('.content-link.active').attr("id");
+
+    if (currentActive !== undefined) {
+        currentActive = currentActive.slice(0, -5);
+    } else {
+        // start again with first content div active
+        return this.goto(this.contents[0]);
+    }
+
+    var index = this.contents.indexOf(currentActive);
+
+    if (direction === "previous") {
+
+        // and we're at the first in line: goto last
+        if (index === 0) {
+            return this.goto(this.contents[this.contents.length - 1]);
+        } else {
+            return this.goto(this.contents[index - 1]);
+        }
+    } else if (direction === "next") {
+
+        // and we're at the last in line: goto first
+        if (index === this.contents.length - 1) {
+            return this.goto(this.contents[0]);
+        } else{
+            return this.goto(this.contents[index + 1]);
+        }
+
+    } else {
+        return direction + " is not a legitimate direction";
+    }
+    // return newActive link to verify execution
+    return "error on index " + index;
+};
 
 /**
 * jQuery function to run the Ask Consulting slide show
@@ -29,13 +64,15 @@ askConsulting.contents = ["insights","strategies","iq","skill"];
 *
 * @example askConsulting.goto('insights')
 */
-askConsulting.goto = function(newActiveContent){
-    var newActiveContentDiv = "#" + newActiveContent,
-    newActiveLink = "#" + newActiveContent + "-link";
+askConsulting.goto = function(newActive){
+    var newActiveContent = "#" + newActive,
+    newActiveLink = "#" + newActive + "-link";
 
-    //animate to the div id.
-    if ($(newActiveContentDiv).length > 0) {
-        $(".details-contentbox-wrapper").animate({"left": -($(newActiveContentDiv).position().left)}, 600);
+    // check validity of passed Id and animate to the active content
+    if ($(newActiveContent).length > 0) {
+        $(".details-contentbox-wrapper").animate({"left": -($(newActiveContent).position().left)}, 600);
+    } else {
+        return newActiveLink + " not found";
     }
 
     // remove "active" class from all links inside #nav
@@ -47,3 +84,5 @@ askConsulting.goto = function(newActiveContent){
     return newActiveLink;
 };
 
+
+var onclick = "this file is for all DOM events";

@@ -10,6 +10,7 @@
   <script src="../libs/qunit/qunit.js"></script>
   <!-- Load local lib and tests. -->
   <script src="../src/ask_consulting.js"></script>
+  <script src="../src/on_click_handlers.js"></script>
   <script src="ask_consulting_test.js"></script>
 </head>
 <body>
@@ -20,10 +21,10 @@
     <span>awesome test markup</span>
         <div id="expertise">
 
-        <a id="insights-link" class="content-link active" href="#" onClick="askConsulting.goto('insights'); return false" ><span id="insights-link-text">Consumer Introductions and Insights</span></a>
-        <a id="strategies-link" href="#" class="content-link" onClick="askConsulting.goto('strategies'); return false" ><span id="strategies-link-text">Results Driven<br /> Retail and Consumer Strategies</span></a>
-        <a id="iq-link" href="#" class="content-link" onClick="askConsulting.goto('iq'); return false"><span id="iq-link-text" >Competitive<br /> IQ</span></a>
-        <a id="skill-link" href="#"  class="content-link" onClick="askConsulting.goto('skill'); return false"><span id="skill-link-text">Skill Building</span></a>
+        <a id="insights-link" class="content-link active" href="#"><span id="insights-link-text">Consumer Introductions and Insights</span></a>
+        <a id="strategies-link" href="#" class="content-link"><span id="strategies-link-text">Results Driven<br /> Retail and Consumer Strategies</span></a>
+        <a id="iq-link" href="#" class="content-link"><span id="iq-link-text" >Competitive<br /> IQ</span></a>
+        <a id="skill-link" href="#"  class="content-link"><span id="skill-link-text">Skill Building</span></a>
     </div><!--end #expertise div-->
 
     <div id="details">

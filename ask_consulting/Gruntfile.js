@@ -7,7 +7,14 @@ module.exports = function(grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('ask_consulting.jquery.json'),
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n'
+        '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        ' * author <%= pkg.author.name %>\n' +
+        ' * email <%= pkg.author.email %>}\n' +
+        ' * <%= pkg.author.url %>\n' +
+        '<%= pkg.homepage ? " * " + pkg.homepage + "\\n" : "" %>' +
+        ' * Copyright (C) <%= grunt.template.today("yyyy") %>\n' +
+        ' * License <%= _.pluck(pkg.licenses, "type").join(", ") %>\n *\n' +
+        ' */\n\n\n',
 
     // Task configuration.
     clean: {
@@ -16,10 +23,13 @@ module.exports = function(grunt) {
     concat: {
       options: {
         banner: '<%= banner %>',
-        stripBanners: false
+        stripBanners: true
       },
       dist: {
-        src: ['src/<%= pkg.name %>.js'],
+        src: [
+          'src/ask_consulting.js',
+          'src/on_click_handlers.js'
+        ],
         dest: 'dist/<%= pkg.name %>.js'
       },
     },

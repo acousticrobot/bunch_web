@@ -15,7 +15,7 @@ Look in dist/ for final uncompressed and minified builds of javascript files:
  *Please make the following changes to the HTML:*
 
    * All speech bubble anchor links should have the class "content-link"
-   * Remove the inline javascript, it is now handled through jQuery onClick events
+   * Remove the inline Javascript, it is now handled through jQuery onClick events.
 
     <a id="insights-link" class="content-link active" href="#">...</a>
     <a id="strategies-link" href="#" class="content-link">...</a>
@@ -23,4 +23,5 @@ Look in dist/ for final uncompressed and minified builds of javascript files:
 
 ## Other necessities:
 
-Rock on!
+  * There is an array `askConsulting.contents` in the js that must match the names of the content divs that are to be animated, in the order that they should appear.
+  * Rock on!
