@@ -22,7 +22,8 @@ askConsulting.inSequenceGoto = function(direction) {
         currentActive = currentActive.slice(0, -5);
     } else {
         // start again with first content div active
-        return this.goto(this.contents[0]);
+        this.goto(this.contents[0]);
+        return "Error: no active div discovered";
     }
 
     var index = this.contents.indexOf(currentActive);
@@ -36,7 +37,6 @@ askConsulting.inSequenceGoto = function(direction) {
             return this.goto(this.contents[index - 1]);
         }
     } else if (direction === "next") {
-
         // and we're at the last in line: goto first
         if (index === this.contents.length - 1) {
             return this.goto(this.contents[0]);

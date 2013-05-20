@@ -16,10 +16,19 @@ askConsulting.clickLinkHandler = function () {
     });
 }
 
+askConsulting.clickArrowHandler = function () {
+    $('#right-arrow').click(function() {
+        askConsulting.inSequenceGoto("next");
+    });
+    $('#left-arrow').click(function() {
+        askConsulting.inSequenceGoto("previous");
+    });
+}
 
 
 
 $(document).ready(function() {
     askConsulting.clickLinkHandler();
+    askConsulting.clickArrowHandler();
 });
 

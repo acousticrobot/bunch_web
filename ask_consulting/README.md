@@ -1,6 +1,6 @@
 # Ask Consulting
 
-*Slide-show with arrow and bubble field on-click animation*
+*Slide-show with arrow and bubble quote on-click animation*
 
 ## Javascript Files
 
@@ -17,9 +17,9 @@ Look in dist/ for final uncompressed and minified builds of javascript files:
    * All speech bubble anchor links should have the class "content-link"
    * Remove the inline Javascript, it is now handled through jQuery onClick events.
 
-    <a id="insights-link" class="content-link active" href="#">...</a>
-    <a id="strategies-link" href="#" class="content-link">...</a>
-    ...
+        <a id="insights-link" class="content-link active" href="#">...</a>
+        <a id="strategies-link" href="#" class="content-link">...</a>
+        ...
 
 ## Other necessities:
 

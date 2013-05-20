@@ -65,7 +65,7 @@ module( "Ask Consulting Namespace", {
         $(".content-link").removeClass("active");
         var result = askConsulting.inSequenceGoto("next");
         ok(result,"Page error with not active links should not throw and error");
-        strictEqual(result, "#" + askConsulting.contents[0] + "-link", "Should return first content div as active");
+        strictEqual(result, "Error: no active div discovered", "Should return an error message");
     });
 
     test("in sequence goto method with invalid link", function(){
@@ -76,11 +76,12 @@ module( "Ask Consulting Namespace", {
 
 module( "DOM Manipulation", {
     setup: function() {
-        $(".content-link").removeClass("active");
         // need to reinstatiate every time to avoid errors!
         $(document).ready(function() {
             askConsulting.clickLinkHandler();
+            askConsulting.clickArrowHandler();
         });
+        $(".content-link").removeClass("active");
     }
     });
 
@@ -92,10 +93,25 @@ module( "DOM Manipulation", {
     });
 
     test("goto method changes active content link", function() {
-        strictEqual($("#insights-link").hasClass("active"),false, "Should work even with all links inactive");
+        strictEqual($('.active').length > 0, false, "Should work even with all links inactive");
         $("#" + askConsulting.contents[2] + "-link").click();
-        strictEqual($("#insights-link").hasClass("active"),false, "Should remove active class from previous link");
-        strictEqual($("#" + askConsulting.contents[2] + "-link").hasClass("active"),true, "Should change which link is active");
+        strictEqual($("#insights-link").hasClass("active"), false, "Should remove active class from previous link");
+        strictEqual($("#" + askConsulting.contents[2] + "-link").hasClass("active"), true, "Should change which link is active");
+    });
+
+    test("arrows clicks trigger goto in sequence", function() {
+        strictEqual($('.active').length > 0, false, "Should work even with all links inactive");
+        $('#left-arrow').click();
+        console.log($('.active'));
+        strictEqual($("#" + askConsulting.contents[0] + "-link").hasClass("active"), true,
+            "Should begin on the first content when no previous active");
+        $('#left-arrow').click();
+        strictEqual($("#" + askConsulting.contents[askConsulting.contents.length - 1] + "-link").hasClass("active"), true,
+            "Should loop to the last content div from the first when right arrow is clicked");
+        $('#right-arrow').click();
+        strictEqual($("#" + askConsulting.contents[0] + "-link").hasClass("active"), true,
+            "Should loop to the first content div from the last when the left arrow is clicked");
+
     });
 
 
