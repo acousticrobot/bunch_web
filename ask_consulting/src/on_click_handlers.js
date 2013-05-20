@@ -14,7 +14,7 @@ askConsulting.clickLinkHandler = function () {
         }
       });
     });
-}
+};
 
 askConsulting.clickArrowHandler = function () {
     $('#right-arrow').click(function() {
@@ -23,7 +23,7 @@ askConsulting.clickArrowHandler = function () {
     $('#left-arrow').click(function() {
         askConsulting.inSequenceGoto("previous");
     });
-}
+};
 
 
 

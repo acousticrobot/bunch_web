@@ -27,7 +27,8 @@ askConsulting.inSequenceGoto = function(direction) {
         currentActive = currentActive.slice(0, -5);
     } else {
         // start again with first content div active
-        return this.goto(this.contents[0]);
+        this.goto(this.contents[0]);
+        return "Error: no active div discovered";
     }
 
     var index = this.contents.indexOf(currentActive);
@@ -41,7 +42,6 @@ askConsulting.inSequenceGoto = function(direction) {
             return this.goto(this.contents[index - 1]);
         }
     } else if (direction === "next") {
-
         // and we're at the last in line: goto first
         if (index === this.contents.length - 1) {
             return this.goto(this.contents[0]);
@@ -85,4 +85,31 @@ askConsulting.goto = function(newActive){
 };
 
 
-var onclick = "this file is for all DOM events";
+askConsulting.clickLinkHandler = function () {
+    jQuery.each($('.content-link'), function() {
+      $(this).click(function() {
+        var id = $(this).attr("id");
+        if ( id !== undefined) {
+            id = id.slice(0, -5);
+            askConsulting.goto(id);
+        }
+      });
+    });
+};
+
+askConsulting.clickArrowHandler = function () {
+    $('#right-arrow').click(function() {
+        askConsulting.inSequenceGoto("next");
+    });
+    $('#left-arrow').click(function() {
+        askConsulting.inSequenceGoto("previous");
+    });
+};
+
+
+
+$(document).ready(function() {
+    askConsulting.clickLinkHandler();
+    askConsulting.clickArrowHandler();
+});
+

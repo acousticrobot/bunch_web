@@ -102,7 +102,6 @@ module( "DOM Manipulation", {
     test("arrows clicks trigger goto in sequence", function() {
         strictEqual($('.active').length > 0, false, "Should work even with all links inactive");
         $('#left-arrow').click();
-        console.log($('.active'));
         strictEqual($("#" + askConsulting.contents[0] + "-link").hasClass("active"), true,
             "Should begin on the first content when no previous active");
         $('#left-arrow').click();
