@@ -31,11 +31,15 @@
 <!--Jquery to the rescue-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
+<!-- LOAD THE SOURCE SCRIPTS FOR REAL CLICK TESTS -->
+<script type="text/javascript" src="src/ask_consulting.js"></script>
+<script type="text/javascript" src="src/on_click_handlers.js"></script>
 
 <!--Hide dem' images on page load-->
 <script type="text/javascript" >
 $(document).ready(function() {
-    $('.home-slide').hide();
+
+}
 </script>
 
 
@@ -72,10 +76,10 @@ $(document).ready(function() {
 <div id="what-we-do">
 
     <div id="expertise">
-        <a id="insights-link" class="active" href="#" onClick="goto('#insights', this); return false" ><span id="insights-link-text">Consumer Introductions and Insights</span></a>
-        <a id="strategies-link" href="#" onClick="goto('#strategies', this); return false" ><span id="strategies-link-text">Results Driven<br /> Retail and Consumer Strategies</span></a>
-        <a id="iq-link" href="#" onClick="goto('#iq', this); return false"><span id="iq-link-text" >Competitive<br /> IQ</span></a>
-        <a id="skill-link" href="#" onClick="goto('#skill', this); return false"><span id="skill-link-text">Skill Building</span></a>
+        <a id="insights-link" class="content-link active" href="#" ><span id="insights-link-text">Consumer Introductions and Insights</span></a>
+        <a id="strategies-link" class="content-link" href="#" ><span id="strategies-link-text">Results Driven<br /> Retail and Consumer Strategies</span></a>
+        <a id="iq-link" class="content-link" href="#" ><span id="iq-link-text" >Competitive<br /> IQ</span></a>
+        <a id="skill-link" class="content-link" href="#" ><span id="skill-link-text">Skill Building</span></a>
     </div><!--end #expertise div-->
 
     <div id="details">
@@ -133,20 +137,6 @@ $(document).ready(function() {
 </div><!--end #what-we-do div-->
 
 
-<script type="text/javascript">
-
-function goto(id, t){
-    //animate to the div id.
-    $(".details-contentbox-wrapper").animate({"left": -($(id).position().left)}, 600);
-
-    // remove "active" class from all links inside #nav
-    $('#expertise a').removeClass('active');
-
-    // add active class to the current link
-    $(t).addClass('active');
-}
-
-</script>
 
 
 
